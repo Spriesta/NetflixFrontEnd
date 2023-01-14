@@ -1,0 +1,87 @@
+a:link {
+    text-decoration:none;
+}
+
+#form{
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#textForm{
+    font-size: xx-large;
+    padding-right: 160px;
+    padding-bottom: 80px;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+
+}
+.input{
+    height: 55px;
+    width: 350px;
+    background-color: #252525;
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
+
+.button{
+    width: 300px;
+    height: 52px ;
+    border-radius: 6px;    
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 30px 0px;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;    
+}
+
+#loginButton{
+    background-color: #e50914 ;
+}
+#loginButton:hover{
+    background-color: rgba(255,255,255,0.47);
+    cursor:pointer;
+
+}
+#registerButton{
+    background-color: #e87c03 ;   
+}
+#registerButton:hover{
+    background-color: rgba(255,255,255,0.47);
+    cursor:pointer;
+}
+
+.social{
+    margin-top: 30px;
+    display: flex;
+  }
+  .social div{
+    background: red;
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 10px 10px 5px;
+    background-color: rgba(255,255,255,0.27);
+    color: #eaf0fb;
+    text-align: center;
+  }
+  .social div:hover{
+    background-color: rgba(255,255,255,0.47);
+    cursor:pointer;
+  }
+  .social .fb{
+    margin-left: 25px;
+  }
+  #face{
+    margin-right: 6px;
+    padding-top: 8px;
+}
+   #google{
+    margin-right: 6px;
+    padding-top: 8px;
+}
