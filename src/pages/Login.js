@@ -2,9 +2,14 @@ import React from 'react'
 import './Login.css';
 import { FaFacebookSquare, FaGoogle } from 'react-icons/fa';
 import {useNavigate} from "react-router-dom"
+import axios, { Axios } from "axios";
 
 function Login() {
     const navigate = useNavigate();
+
+    async function apistek() {
+        //await axios.post('https://localhost:44361/api/ActRegister').then(data => console.log(data)) 
+    }
 
   return (
         <div>
@@ -21,7 +26,7 @@ function Login() {
               </div>
                     
                 <div id='buttons'>
-                    <button className='button' id='loginButton' type="">Oturum Aç</button>                    
+                    <button onClick={apistek} className='button' id='loginButton' type="">Oturum Aç</button>                    
                     <a onClick={()=> navigate("/Register")}><button className='button' id='registerButton' type="">Kayıt Ol</button></a>
 
                 </div>

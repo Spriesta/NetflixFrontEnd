@@ -1,10 +1,35 @@
 import React from 'react'
 import './Register.css';
 import { FaFacebookSquare, FaGoogle } from 'react-icons/fa';
-import {useNavigate} from "react-router-dom"
+import axios, { Axios } from "axios";
+import {json, useNavigate} from "react-router-dom"
+import { useState } from "react";
 
 function Register () {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+
+    const [form, setFormElements] = useState({email:"", password: ""});
+    const handleChanges = (e) => {
+        setFormElements({...form, [e.target.name]: e.target.value})
+    }
+
+    async function ActRegister() {
+        let res = await axios.post(
+            'https://localhost:44361/api/Register/ActRegister',
+            {
+                email: form.email,
+                password: form.password
+            }            
+        );
+        
+        if (res == null || res.data.success === false) {
+            alert("Başarısız..!")
+        }
+        else{
+            alert("Başarılı..!")
+        }
+    } 
+
   return (
         <div>
            <div id='form'>
@@ -15,12 +40,12 @@ function Register () {
                 </div>
 
                 <div id='inputs'>                    
-                    <input className='input' type="" name="" defaultValue = "" placeholder='E-Posta'/>
-                    <input className='input' type="" name="" defaultValue = "" placeholder = 'Parola'/>
+                    <input className='input' type="" name="email"  placeholder='E-Posta' onChange={handleChanges}/>
+                    <input className='input' type="password" name="password"  placeholder = 'Parola' onChange={handleChanges}/>
               </div>
                     
                 <div id='buttons'>
-                    <button className='button' id='registerButton' type="">Kayıt Ol</button>
+                    <button className='button' id='registerButton' type="" onClick={ActRegister} >Kayıt Ol</button>
                 </div>
 
                 <div className="social">                    
