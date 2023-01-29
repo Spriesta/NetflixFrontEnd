@@ -4,9 +4,14 @@ import Register from '../pages/Register'
 import './LoginLayout.css';
 import logo from '../assets/netflix-icon.png';
 import { Outlet } from 'react-router-dom';
+import axios, { Axios } from "axios";
+import {useNavigate} from "react-router-dom"
 
+import { useEffect } from "react";
 
 function LoginLayout() {
+  const navigate = useNavigate();
+
   return (
     <div>
         <div id='mainContainer'>

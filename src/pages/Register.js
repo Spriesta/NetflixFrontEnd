@@ -22,8 +22,9 @@ function Register () {
             }            
         );
         
-        if (res == null || res.data.success === false) {
-            alert("Başarısız..!")
+        if (res.data.success === false) {
+            alert(res.data.data)
+            return;
         }
         else{
             alert("Başarılı..!")

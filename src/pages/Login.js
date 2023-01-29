@@ -3,12 +3,35 @@ import './Login.css';
 import { FaFacebookSquare, FaGoogle } from 'react-icons/fa';
 import {useNavigate} from "react-router-dom"
 import axios, { Axios } from "axios";
+import { useState } from "react";
+import Test from '../pages/Test';
 
 function Login() {
     const navigate = useNavigate();
 
-    async function apistek() {
-        //await axios.post('https://localhost:44361/api/ActRegister').then(data => console.log(data)) 
+    const [form, setFormElements] = useState({email:"", password: ""});
+    const handleChanges = (e) => {
+        setFormElements({...form, [e.target.name]: e.target.value})
+    }
+
+    async function ActLogin() {
+        let res = await axios.post(
+            'https://localhost:44361/api/Login/ActLogin',
+            {
+                email: form.email,
+                password: form.password
+            }            
+        );
+
+        if (res.data.success === false) {
+            alert(res.data.data)
+            return;
+        }
+        else{
+            navigate("/Test");
+
+            //yeni sayfaya navigate et
+        }
     }
 
   return (
@@ -21,12 +44,12 @@ function Login() {
                 </div>
 
                 <div id='inputs'>                    
-                    <input className='input' type="" name="" defaultValue = "" placeholder='E-Posta'/>
-                    <input className='input' type="" name="" defaultValue = "" placeholder = 'Parola'/>
+                    <input className='input' type="" name="email" placeholder='E-Posta' onChange={handleChanges}/>
+                    <input className='input' type="" name="password" placeholder = 'Parola' onChange={handleChanges}/>
               </div>
                     
                 <div id='buttons'>
-                    <button onClick={apistek} className='button' id='loginButton' type="">Oturum Aç</button>                    
+                    <button onClick={ActLogin} className='button' id='loginButton' type="">Oturum Aç</button>                    
                     <a onClick={()=> navigate("/Register")}><button className='button' id='registerButton' type="">Kayıt Ol</button></a>
 
                 </div>
