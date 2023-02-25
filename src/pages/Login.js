@@ -45,7 +45,7 @@ function Login() {
 
                 <div id='inputs'>                    
                     <input className='input' type="" name="email" placeholder='E-Posta' onChange={handleChanges}/>
-                    <input className='input' type="" name="password" placeholder = 'Parola' onChange={handleChanges}/>
+                    <input className='input' type="password" name="password" placeholder = 'Parola' onChange={handleChanges}/>
               </div>
                     
                 <div id='buttons'>

@@ -21,8 +21,6 @@ function LoginLayout() {
             
             <div id='body'>
               <Outlet/>
-               {/* <Login/>
-               <Register/> */}
             </div>
 
             <div id='footer'>

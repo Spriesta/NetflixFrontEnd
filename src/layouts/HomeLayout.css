@@ -1,0 +1,43 @@
+#homeBody{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #212529;
+    color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#navbar{
+    height: 60px;
+    font-size: larger;
+    min-height: 60px;
+    align-items: center;
+    border-bottom: 3px solid #dc3545;
+}
+#navbarLogo{
+    width: 150px;
+}
+#navbarSearch{
+    display: flex;
+    justify-content: end;
+}
+#navbarSearchText{
+    width: 350px;
+}
+#navbarSearchIcon{
+    width: 40px;    
+    height: 35px;
+    text-align: center;
+    background-color: white;    
+    border-radius: 2px;
+}
+#navbarSearchIcon:hover{
+    cursor:pointer;
+    background-color: rgb(170, 165, 165);
+}
+#navbarSearchBtn{
+    height: 30px;
+    width: 25px;  
+    color: black;
+}
