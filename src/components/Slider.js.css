@@ -1,0 +1,29 @@
+#SliderBody{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 150px;
+    text-align: center;    
+}
+
+#SliderRowBody{
+    align-items: center;
+    margin-top: 20px;
+}
+
+#SliderImgContext:hover{
+    cursor:pointer;    
+}
+
+.SliderImg{
+    border-radius: 50%;
+    border: 2px solid #dc3545;    
+}
+.SliderImg:hover{
+    border-radius: 5%;
+    transition-duration: 400ms ;
+    border: none;    
+}
+
+.SliderText{
+    padding-top: 10px;
+}
+

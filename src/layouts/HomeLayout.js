@@ -9,6 +9,7 @@ import { FaSearch, FaUserCircle} from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets/netflix-icon.png';
 import './HomeLayout.css';
+import Home from '../pages/Home';
 
 function HomeLayout() {
     const navigate = useNavigate();
@@ -21,7 +22,7 @@ function HomeLayout() {
         );
     
         if (res.data === true) {
-          navigate("/Test");
+          navigate("/Home");
         }
         else{
           alert("yetkisiz giriş..!")
@@ -52,6 +53,9 @@ function HomeLayout() {
           </div>
       </div>
 
+      <div>
+        <Outlet/>
+      </div>
 
     </div>
   )

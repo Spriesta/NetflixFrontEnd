@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
  import Register from './pages/Register';
  import Login from './pages/Login';
  import LoginLayout from './layouts/LoginLayout';
- import Test from './pages/Test';
+ import Home from './pages/Home';
  import HomeLayout from './layouts/HomeLayout';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         </Route>
            
         <Route element = {<HomeLayout/>}>
-          <Route path='/Test' element = {<Test/>}/>
+          <Route path='/Home' element = {<Home/>}/>
         </Route>
 
       </Routes>

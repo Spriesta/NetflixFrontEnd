@@ -4,7 +4,7 @@ import { FaFacebookSquare, FaGoogle } from 'react-icons/fa';
 import {useNavigate} from "react-router-dom"
 import axios, { Axios } from "axios";
 import { useState } from "react";
-import Test from '../pages/Test';
+import Home from './Home';
 
 function Login() {
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ function Login() {
             return;
         }
         else{
-            navigate("/Test");
+            navigate("/Home");
 
             //yeni sayfaya navigate et
         }
